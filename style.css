@@ -1,6 +1,13 @@
 /* GENERAL */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@media (max-width: 768px){
+  #humburger-nav{
+    display: flex;
+    flex-direction: column;/* satck items vertically*/
+    align-items: center;
+  }
+}
 
 * {
   margin: 0;
@@ -302,13 +309,12 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: rgb(0, 0, 0);
   border-radius: 2rem;
   text-align: center;
-  background-color: #000000;
+  background-color: #6b6565;
   box-shadow:0 10px 10px rgba(0, 0, 0, 0.5);
 }
-
 .section-container {
   gap: 4rem;
   height: 80%;
