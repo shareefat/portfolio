@@ -11,7 +11,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
-    <nav id="desktop-nav">
+    <header>
+    <nav id="desktop-nav" role="navigation" aria-label="Mobile navigation">
       <div class="logo">MOHAMMED SHAREEF AT</div>
       <div>
         <ul class="nav-links">
@@ -22,7 +23,8 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
+  </header>
+    <nav id="hamburger-nav" role="navigation" aria-label="Mobile navigation">
       <div class="logo">MOHAMMED SHAREEF AT</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
@@ -30,7 +32,7 @@
           <span></span>
           <span></span>
         </div>
-        <div class="menu-links">
+        <div class="menu-links" id="menu-links"hidden>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
