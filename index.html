@@ -5,383 +5,585 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MOHAMMED SHAREEF AT</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="IMAGE/WhatsApp Image 2024-07-14 at 2.08.31 PM.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(244, 248, 7);
+}
+
+/* Navigation */
+#desktop-nav {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d2e32;
+}
+
+.nav-links .nav-link {
+  color: #2d2e32;
+  font-weight: 600;
+}
+
+/* Profile Section */
+#profile {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+
+.section__text__p1 {
+  color: #147efb;
+  font-weight: 600;
+}
+
+.title {
+  color: #2d2e32;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.mern {
+  color: #767676;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.btn-color-1 {
+  background: #147efb;
+  color: white;
+}
+
+.btn-color-2 {
+  border: 2px solid #147efb;
+  color: #147efb;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.5rem;
+}
+
+/* About Section */
+#about {
+  padding: 4rem 0;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.details-container {
+  background: white;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+/* Skills Section */
+#skills {
+  padding: 4rem 0;
+}
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Projects Section */
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.project-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.submit-btn {
+  background: #147efb;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+/* Instagram Icon */
+.instagram {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.bxl-instagram {
+  font-size: 2.5rem;
+  color: #147efb;
+}
+
+/* Media Queries */
+
+/* Small Mobile - 320px */
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .details-container {
+    padding: 1rem;
+  }
+  
+  .project-img {
+    height: 150px;
+  }
+}
+
+/* Medium Mobile - 375px */
+@media screen and (max-width: 375px) {
+  #profile {
+    padding-top: 6rem;
+  }
+  
+  .section__text__p1 {
+    font-size: 0.9rem;
+  }
+  
+  .mern {
+    font-size: 1rem;
+  }
+}
+
+/* Large Mobile - 425px */
+@media screen and (max-width: 425px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 200px;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Tablet - 768px */
+@media screen and (max-width: 768px) {
+  .section__pic-container {
+    margin: 2rem auto;
+  }
+  
+  .about-pic {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .details-container {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Laptop - 1024px */
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+  
+  .project-img {
+    height: 180px;
+  }
+}
+
+/* Laptop L - 1440px */
+@media screen and (max-width: 1440px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .details-container {
+    padding: 2rem;
+  }
+}
+
+/* 4K - 2560px */
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 18px;
+  }
+  
+  .container {
+    max-width: 1800px;
+  }
+  
+  .title {
+    font-size: 4rem;
+  }
+  
+  .project-img {
+    height: 300px;
+  }
+  
+  .details-container {
+    padding: 3rem;
+  }
+  
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* Hover Effects */
+.btn:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #147efb !important;
+}
+
+.project-btn:hover {
+  background: #147efb;
+  color: white;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section__text, .details-container, .project-img {
+  animation: fadeIn 1s ease-out;
+}
+    </style>
   </head>
   <body>
-    <header>
-    <nav id="desktop-nav" role="navigation" aria-label="Mobile navigation">
-      <div class="logo">MOHAMMED SHAREEF AT</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-    <nav id="hamburger-nav" role="navigation" aria-label="Mobile navigation">
-      <div class="logo">MOHAMMED SHAREEF AT</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links" id="menu-links"hidden>
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contacts" onclick="toggleMenu()">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="desktop-nav">
+      <div class="container">
+        <a class="navbar-brand logo" href="#">MOHAMMED SHAREEF AT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav nav-links">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </div>
       </div>
     </nav>
-    <section id="profile">
-       <!-- <div class="section__pic-container">  -->
-        <!-- <img src="./IMAGE/IMG_4226.JPG" alt="Profile picture" style="border-radius: 50%;" /> -->
-      </div> 
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">MOHAMMED SHAREEF</h1>
-        <p class="mern">DATA SCIENTIST</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./DOC/mohammed_shareef new.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
+
+    <!-- Profile Section -->
+    <section id="profile" class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center">
+          <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">MOHAMMED SHAREEF</h1>
+            <p class="mern">DATA SCIENTIST</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2" onclick="window.open('./DOC/mohammed_shareef new.pdf')">
+                Download CV
+              </button>
+              <button class="btn btn-color-1" onclick="location.href='#contact'">
+                Contact Info
+              </button>
+            </div>
+            <div id="socials-container">
+              <a href="https://www.linkedin.com/in/mohammed-shareef-at-58842123a" target="_blank">
+                <img src="./assets/linkedin.png" alt="LinkedIn" class="icon">
+              </a>
+              <a href="https://github.com/Shareefataz" target="_blank">
+                <img src="./assets/github.png" alt="GitHub" class="icon">
+              </a>
+            </div>
+          </div>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/mohammed-shareef-at-58842123a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Shareefataz'"
-          />
+        <div class="col-lg-6">
+          <div class="section__pic-container">
+            <img src="./IMAGE/IMG_9522.JPG" alt="Profile picture" class="img-fluid rounded-circle border border-4">
+          </div>
         </div>
-      </div>
-      <div class="section__pic-container">
-        <img src="./IMAGE/IMG_9522.JPG" alt="Profile picture" style="border-radius: 300em;border: 4px solid;" />
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./IMAGE/IMG_4226.JPG"
-            alt="Profile picture"
-            class="about-pic"
-          />
+
+    <!-- About Section -->
+    <section id="about" class="container">
+      <div class="text-center mb-5">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="section__pic-container">
+            <img src="./IMAGE/IMG_4226.JPG" alt="Profile picture" class="img-fluid about-pic">
+          </div>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>6 Month PG in<br />Data Science</p>
+        <div class="col-lg-8">
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="details-container">
+                <img src="./assets/experience.png" alt="Experience icon" class="icon">
+                <h3>Experience</h3>
+                <p>6 Month PG in<br>Data Science</p>
+              </div>
             </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Tech</p> </p>
-              <p>Computer Science</p>
+            <div class="col-md-6">
+              <div class="details-container">
+                <img src="./assets/education.png" alt="Education icon" class="icon">
+                <h3>Education</h3>
+                <p>B.Tech<br>Computer Science</p>
+              </div>
             </div>
           </div>
           <div class="text-container">
-            <p style="color: black;">
-                Recent computer science engineering graduate with a solid foundation in programming, software
-                development, and problem-solving, eager to contribute technical skills and a passion for innovation
-                to a dynamic team in an entry-level role.
-            </p>
+            <p>Recent computer science engineering graduate with a solid foundation in programming, software
+               development, and problem-solving, eager to contribute technical skills and a passion for innovation
+               to a dynamic team in an entry-level role.</p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#skills'"
-      />
     </section>
-    <section id="skills">
-       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="skills-details-container">
-        <div class="about-containers">
+
+    <!-- Skills Section -->
+    <section id="skills" class="container">
+      <div class="text-center mb-5">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
           <div class="details-container">
-            <h2 class="skills-sub-title"></h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>AWS</h3>
-                </div>
+                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
+                <h3>AWS</h3>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                </div>
-              </article>
-
-              <article>
-                <!-- <img 
-                  src="./assets/checkmark.png" 
-                  alt="Experience icon"
-                  class="icon"
-                />
-                 -->
-                <div>
-                  <h3></h3>
-                </div>
+                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
+                <h3>SQL</h3>
               </article>
             </div>
           </div>
+        </div>
+        <div class="col-md-4">
           <div class="details-container">
-            <h2 class="skills-sub-title"></h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>python</h3>
-                </div>
+                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
+                <h3>Python</h3>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>DAV</h3>
-                </div>
+                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
+                <h3>DAV</h3>
               </article>
-
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>ML</h3>
-                </div>
+                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
+                <h3>ML</h3>
               </article>
             </div>
           </div>
+        </div>
+        <div class="col-md-4">
           <div class="details-container">
-            <h2 class="skills-sub-title"></h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Excel</h3>
-                </div>
+                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
+                <h3>Excel</h3>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Powerbi</h3>
-                </div>
+                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
+                <h3>PowerBI</h3>
               </article>
-
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tableu</h3>
-                </div>
+                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
+                <h3>Tableau</h3>
               </article>
             </div>
-          </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
     </section>
-    <section id="projects">
-      <!-- <p class="section__text__p1">Browse My Recent</p> -->
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+      <h1 class="title text-center mb-5">Projects</h1>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="details-container color-container h-100">
             <div class="article-container">
-              <img
-                src="./IMAGE/vecteezy_businessman-holding-global-internet-connection-technology_7252575.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
+              <img src="./IMAGE/vecteezy_businessman-holding-global-internet-connection-technology_7252575.jpg" 
+                   alt="Project 1" class="project-img">
             </div>
             <h2 class="experience-sub-title project-title">Project One</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Shareefataz'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Shareefataz'"
-              >
-                Live Demo
-              </button>
+              <button class="btn btn-color-2 project-btn" 
+                      onclick="location.href='https://github.com/Shareefataz'">Github</button>
+              <button class="btn btn-color-2 project-btn" 
+                      onclick="location.href='https://github.com/Shareefataz'">Live Demo</button>
             </div>
           </div>
-          <div class="details-container color-container">
+        </div>
+        <div class="col-md-4">
+          <div class="details-container color-container h-100">
             <div class="article-container">
-              <img
-                src="./IMAGE/flat-lay-workstation-with-copy-space-laptop.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
+              <img src="./IMAGE/flat-lay-workstation-with-copy-space-laptop.jpg" 
+                   alt="Project 2" class="project-img">
             </div>
             <h2 class="experience-sub-title project-title">Project Two</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Shareefataz'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Shareefataz'"
-              >
-                Live Demo
-              </button>
+              <button class="btn btn-color-2 project-btn" 
+                      onclick="location.href='https://github.com/Shareefataz'">Github</button>
+              <button class="btn btn-color-2 project-btn" 
+                      onclick="location.href='https://github.com/Shareefataz'">Live Demo</button>
             </div>
           </div>
-          <div class="details-container color-container">
+        </div>
+        <div class="col-md-4">
+          <div class="details-container color-container h-100">
             <div class="article-container">
-              <img
-                src="./IMAGE/download.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
+              <img src="./IMAGE/download.jpg" alt="Project 3" class="project-img">
             </div>
             <h2 class="experience-sub-title project-title">Project Three</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Shareefataz'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Shareefataz'"
-              >
-                Live Demo
-              </button>
+              <button class="btn btn-color-2 project-btn" 
+                      onclick="location.href='https://github.com/Shareefataz'">Github</button>
+              <button class="btn btn-color-2 project-btn" 
+                      onclick="location.href='https://github.com/Shareefataz'">Live Demo</button>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
-   <section id="contact">
-    <form action="https://api.web3forms.com/submit" method="POST">
-      <div class="contact-form">
-      <div class="contact-container">
-        <h2>contact for more</h2>
-        <div class="form-contact">
-            <label for="name">Name:</label>
-            <input type="hidden" name="access_key" value="49a0ee26-cb84-4b99-ac52-602d5797c89a">
-            <input type="text" id="name" name="name" required placeholder="Enter Your Name">
-            </div>
-            <div class="form-contact">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="Enter Your Email">
-            </div>
-            <div class="form-contact">
-                <label for="message">Message</label>
-                <input type="text" id="message" name="message" required placeholder="Type Your Message">
-            </div>
-            <div class="contact-btn">
+    </section>
+
+    <section>
+      <h1>                                         .</h1>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <div class="contact-container">
+          <h2 class="text-center mb-4">Contact for more</h2>
+          <input type="hidden" name="access_key" value="49a0ee26-cb84-4b99-ac52-602d5797c89a">
+          
+          <div class="form-contact mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required placeholder="Enter Your Name">
+          </div>
+          
+          <div class="form-contact mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required placeholder="Enter Your Email">
+          </div>
+          
+          <div class="form-contact mb-4">
+            <label for="message" class="form-label">Message:</label>
+            <textarea class="form-control" id="message" name="message" required placeholder="Type Your Message" rows="4"></textarea>
+          </div>
+          
+          <div class="text-center">
             <button type="submit" class="submit-btn">Submit</button>
-     </div>
-      </div>
+          </div>
+        </div>
+      </form>
 
-      </div>
-    </form>
-    <div class="instagram">
-        <!-- <h3>instagram</h3> -->
-      </div>
-
-    <div class="instagram">
+      <div class="instagram">
         <a href="https://www.instagram.com/the_creating.man/"><i class='bx bxl-instagram bx-tada'></i></a>
-    </div>
-    <footer>
-      <nav>
+      </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="container-fluid py-4">
+      <nav class="mb-3">
         <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contacts">Contact</a></li>
+          <ul class="nav justify-content-center nav-links">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 shareef. All Rights Reserved.</p>
+      <p class="text-center mb-0">Copyright &#169; 2024 shareef. All Rights Reserved.</p>
     </footer>
-    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
